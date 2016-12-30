@@ -1,14 +1,14 @@
 import tttApp from './'
 
 describe('tttGame reducer', () => {
+
+  beforeEach(() => {
+    jest.resetModules()
+  })
+
   it('should return the initial state', () => {
-    expect(
-      tttApp(undefined, {})
-    ).toEqual([
-      {
-        humanPlayer: null
-      }
-    ])
+    const initialState = { humanPlayer: null }
+    expect(tttApp(undefined, {})).toEqual(initialState)
   })
 
   // it('should handle ADD_TODO', () => {

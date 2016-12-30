@@ -1,8 +1,7 @@
-const initialState = [
-  {
-    humanPlayer: null
-  }
-]
+const initialState = {
+  humanPlayer: null
+}
+
 
 
 const tttApp = (state = initialState, action) => {

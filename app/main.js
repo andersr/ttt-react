@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import tttApp from './reducers'
-import App from './components/App'
+import AppContainer from './containers/AppContainer.jsx'
 
 const store = createStore(
   tttApp
@@ -11,7 +11,7 @@ const store = createStore(
 
 render(
   <Provider store={store}>
-    <App />
+    <AppContainer />
   </Provider>,
   document.getElementById('app')
 )

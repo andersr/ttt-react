@@ -1,6 +1,6 @@
 import React from 'react'
-// import SelectPlayer from './SelectPlayer'
+import ModalDialog from './ModalDialog.jsx'
 
-const App = () => <div>My App</div>
+const App = ({ humanPlayer }) => humanPlayer === null ?  <ModalDialog /> :  <div>Run Game</div>
 
 export default App

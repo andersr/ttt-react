@@ -15,16 +15,12 @@ export default class ModalDialog extends React.Component {
   render () {
 
     return (
-      <div className="static-modal">
           <Modal show={this.state.showModal} backdrop={true} onHide={this.close.bind(this)}>
             <Modal.Header>
-              <Modal.Title>{this.props.headerText}</Modal.Title>
+              <Modal.Title>{this.props.heading}</Modal.Title>
             </Modal.Header>
-            <Modal.Body>
-              One fine body...
-            </Modal.Body>
+            <Modal.Body>{this.props.content}</Modal.Body>
         </Modal>
-      </div>
     )
   }
 }
@@ -32,11 +28,14 @@ export default class ModalDialog extends React.Component {
 
 ModalDialog.propTypes = {
   showModal: React.PropTypes.bool,
-  headerText: React.PropTypes.string.isRequired
+  heading: React.PropTypes.string.isRequired,
+  content: React.PropTypes.object.isRequired
+
 }
 
 ModalDialog.defaultProps = {
   showModal: false
 }
-// ,
+// className="modal-container"
 // content: React.PropTypes.object.isRequired
+// <div className="static-modal">

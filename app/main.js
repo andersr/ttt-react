@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import tttApp from './reducers'
-import AppContainer from './containers/AppContainer.jsx'
+import AppContainer from './containers/AppContainer/'
 
 const store = createStore(
   tttApp

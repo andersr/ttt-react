@@ -1,6 +1,4 @@
-// import { shallow } from 'enzyme'
-
-describe('AppContainer', () => {
+describe('<App />', () => {
   // let selectedPlayer
   // let testGame
 
@@ -8,7 +6,7 @@ describe('AppContainer', () => {
     jest.resetModules()
   })
 
-  it('what should be tested here?')
+  it('displays <SelectPlayerMenu /> if humanPlayer is null')
   // , () => {
     // ensure default state
     // call dispatch

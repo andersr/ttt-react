@@ -19,7 +19,10 @@ const common = {
       inject: 'body',
       filename: 'index.html'
     })
-  ]
+  ],
+  resolve: {
+    extensions: PATHS.extensions
+  }
 }
 const config = merge(
   common,

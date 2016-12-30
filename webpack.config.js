@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const common = {
   context: PATHS.app,
-  entry: './main',
+  entry: ['./main.js', './styles/main.scss'],
   output: {
     path: PATHS.build,
     filename: '[name].js'
@@ -38,7 +38,8 @@ const config = merge(
     // Customize host/port here if needed
     host: process.env.HOST,
     port: process.env.PORT
-  })
+  }),
+  webpack_parts.loadSCSS([PATHS.styles])
 )
 
 module.exports = validate(config, {

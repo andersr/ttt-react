@@ -4,7 +4,8 @@ module.exports = {
   app: path.join(__dirname, '../app'),
   build: path.join(__dirname, '../build'),
   extensions: ['', '.js', '.jsx'],
-  indexTemplate: path.join(__dirname, '../app/templates/index.tpl.html')
+  indexTemplate: path.join(__dirname, '../app/templates/index.tpl.html'),
+    styles: path.join(__dirname, '../app/styles/main.scss')
 }
 
 // ,

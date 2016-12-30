@@ -67,19 +67,19 @@ exports.loadJSX = function (paths) {
   }
 }
 
-exports.loadCSS = function (paths) {
-  return {
-    module: {
-      loaders: [
-        {
-          test: /\.css$/,
-          loader: 'style!css',
-          include: paths
-        }
-      ]
-    }
-  }
-}
+// exports.loadCSS = function (paths) {
+//   return {
+//     module: {
+//       loaders: [
+//         {
+//           test: /\.css$/,
+//           loader: 'style!css',
+//           include: paths
+//         }
+//       ]
+//     }
+//   }
+// }
 
 exports.loadSCSS = function (paths) {
   return {
@@ -95,19 +95,19 @@ exports.loadSCSS = function (paths) {
   }
 }
 
-exports.extractSCSS = function (paths) {
-  return {
-    plugins: [
-      new ExtractTextPlugin('[name].css')
-    ],
-    module: {
-      loaders: [
-        {
-          test: /\.scss$/,
-          loader: ExtractTextPlugin.extract('style', 'css!sass'),
-          include: paths
-        }
-      ]
-    }
-  }
-}
+// exports.extractSCSS = function (paths) {
+//   return {
+//     plugins: [
+//       new ExtractTextPlugin('[name].css')
+//     ],
+//     module: {
+//       loaders: [
+//         {
+//           test: /\.scss$/,
+//           loader: ExtractTextPlugin.extract('style', 'css!sass'),
+//           include: paths
+//         }
+//       ]
+//     }
+//   }
+// }

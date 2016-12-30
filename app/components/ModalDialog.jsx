@@ -1,6 +1,42 @@
 import React from 'react'
-import { Button } from 'react-bootstrap'
+import { Modal, Button } from 'react-bootstrap'
 
-const ModalDialog = () => <div>Modal Dialog</div>
+export default class ModalDialog extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+     showModal: true
+    }
+  }
 
-export default ModalDialog
+  close() {
+    this.setState({ showModal: false })
+  }
+  render () {
+
+    return (
+      <div className="static-modal">
+          <Modal show={this.state.showModal} backdrop={true} onHide={this.close.bind(this)}>
+            <Modal.Header>
+              <Modal.Title>{this.props.headerText}</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              One fine body...
+            </Modal.Body>
+        </Modal>
+      </div>
+    )
+  }
+}
+
+
+ModalDialog.propTypes = {
+  showModal: React.PropTypes.bool,
+  headerText: React.PropTypes.string.isRequired
+}
+
+ModalDialog.defaultProps = {
+  showModal: false
+}
+// ,
+// content: React.PropTypes.object.isRequired

@@ -1,5 +1,5 @@
-// const initialState = {
-//   humanPlayer: null
-// }
-//
-// export default initialState
+const initialState = {
+  humanPlayer: null
+}
+
+export default initialState

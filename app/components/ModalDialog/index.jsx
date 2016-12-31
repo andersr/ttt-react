@@ -14,8 +14,8 @@ export default class ModalDialog extends React.Component {
       this.setState({ showModal: false })
     }
   }
-  render () {
 
+  render () {
     return (
         <Modal show={this.state.showModal} backdrop={true} onHide={this.close.bind(this)}>
           <Modal.Header>
@@ -27,19 +27,14 @@ export default class ModalDialog extends React.Component {
   }
 }
 
-
 ModalDialog.propTypes = {
   showModal: React.PropTypes.bool,
   allowHide: React.PropTypes.bool,
   heading: React.PropTypes.string.isRequired,
   content: React.PropTypes.object.isRequired
-
 }
 
 ModalDialog.defaultProps = {
   showModal: false,
   allowHide: true
 }
-// className="modal-container"
-// content: React.PropTypes.object.isRequired
-// <div className="static-modal">

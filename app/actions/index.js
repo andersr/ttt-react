@@ -1,8 +1,8 @@
-import * as types from './ActionTypes'
+// import * as types from './ActionTypes'
+
+export const SELECT_PLAYER = 'SELECT_PLAYER'
 
 export const selectPlayer = selection => {
-  return {
-    type: type.SELECT_PLAYER,
-    selection
-  }
+  type: SELECT_PLAYER,
+  selection
 }

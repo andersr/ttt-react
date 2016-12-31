@@ -1,22 +1,20 @@
 import { connect } from 'react-redux'
 import App from '../../components/App/'
 
-const getSelectedPlayer = (player, action) => {
-  switch (action) {
-    case 'SELECT_PLAYER':
-      return player
-    default:
-      return null
-  }
-}
+// should subscribe to selectedPlayer and display the menu or the game accordingly
+
+// import store from '../../store'
+
+// console.log('getState: ', store.getState())
 
 const mapStateToProps = (state) => {
   return {
-    humanPlayer: null //  getSelectedPlayer(state.humanPlayer, action)
+    humanPlayer: state.humanPlayer 
   }
 }
-const mapDispatchToProps = {
-  onSelectPlayer: null
+const mapDispatchToProps = () => {
+  return {
+  }
 }
 
 // const mapDispatchToProps = (dispatch) => {
@@ -32,6 +30,16 @@ const AppContainer = connect(
   mapDispatchToProps
 )(App)
 
+// console.log('AppContainer: ', AppContainer)
+
+// const getSelectedPlayer = (player, action) => {
+//   switch (action) {
+//     case 'SELECT_PLAYER':
+//       return player
+//     default:
+//       return null
+//   }
+// }
 // class AppContainer extends React.Component {
 //   constructor() {
 //     super();

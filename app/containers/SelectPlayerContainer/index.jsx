@@ -10,23 +10,22 @@ import SelectPlayerMenu from '../../components/SelectPlayerMenu'
 //       return null
 //   }
 // }
+// const options = ['x', 'o']
 
 const mapStateToProps = (state) => {
   return {
-    humanPlayer: null //  getSelectedPlayer(state.humanPlayer, action)
+    humanPlayer: state.humanPlayer
   }
 }
-const mapDispatchToProps = {
-  onSelectPlayer: null
-}
+const mapDispatchToProps = ({
+  selectPlayer: null
+})
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     onSelectPlayer: (selection) => {
-//       dispatch(runGame(selection))
-//     }
-//   }
-// }
+const mapDispatchToProps = (dispatch) => ({
+  handleSelectPlayer: selection => {
+    dispatch(selectPlayer(selection))
+  }
+})
 
 const SelectPlayerContainer = connect(
   mapStateToProps,

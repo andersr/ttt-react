@@ -10,17 +10,19 @@ export default class ModalDialog extends React.Component {
   }
 
   close() {
-    this.setState({ showModal: false })
+    if (this.props.allowHide) {
+      this.setState({ showModal: false })
+    }
   }
   render () {
 
     return (
-          <Modal show={this.state.showModal} backdrop={true} onHide={this.close.bind(this)}>
-            <Modal.Header>
-              <Modal.Title>{this.props.heading}</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>{this.props.content}</Modal.Body>
-        </Modal>
+        <Modal show={this.state.showModal} backdrop={true} onHide={this.close.bind(this)}>
+          <Modal.Header>
+            <Modal.Title>{this.props.heading}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>{this.props.content}</Modal.Body>
+      </Modal>
     )
   }
 }
@@ -28,13 +30,15 @@ export default class ModalDialog extends React.Component {
 
 ModalDialog.propTypes = {
   showModal: React.PropTypes.bool,
+  allowHide: React.PropTypes.bool,
   heading: React.PropTypes.string.isRequired,
   content: React.PropTypes.object.isRequired
 
 }
 
 ModalDialog.defaultProps = {
-  showModal: false
+  showModal: false,
+  allowHide: true
 }
 // className="modal-container"
 // content: React.PropTypes.object.isRequired

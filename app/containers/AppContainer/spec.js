@@ -1,3 +1,4 @@
 describe('AppContainer', () => {
-  it('what should be tested here?')
+  it('creates an empty game board')
+  it('prompts the user to select a player')
 })

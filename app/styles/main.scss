@@ -4,3 +4,48 @@
 // .modal-container .modal, .modal-container .modal-backdrop {
 //   position: absolute;
 // }
+
+
+.ttt-board {
+  // width: 100%;
+  // height: 100%;
+  display: table;
+
+    .ttt-row {
+      display: table-row;
+      // height: 33%;
+    }
+
+    .ttt-square {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 5rem;
+      line-height: .9;
+      width: 33%;
+      height: 33%;
+      border:1px solid #e7e5e1
+      // padding: 0;
+      // overflow:auto;
+    }
+
+  }
+
+  // .empty-square {
+  //   cursor: pointer;
+  //   &:hover {
+  //     background-color: $color--secondary; // was #e7e5e1
+  //   }
+  // }
+
+  // .empty-square {
+  //   height:100%;
+  //   width: 100%;
+  //   background-color: blue;
+  //   border:none;
+  //   cursor: pointer;
+  //
+  //   &:hover {
+  //     background-color: $color--secondary; // was #e7e5e1
+  //   }
+  // }

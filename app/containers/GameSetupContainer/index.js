@@ -1,20 +1,18 @@
 import { connect } from 'react-redux'
-import App from '../../components/App/'
-
-//initialize game: createGameSquares(), setPlayers() 
+import GameBoard from '../../components/GameBoard/'
 
 const mapStateToProps = state => {
   return {
-    humanPlayer: state.humanPlayer
+    tttGame: state.tttGame
   }
 }
 const mapDispatchToProps = () => {
   return {}
 }
 
-const AppContainer = connect(
+const GameBoardContainer = connect(
   mapStateToProps,
   mapDispatchToProps
 )(App)
 
-export default AppContainer
+export default GameBoardContainer

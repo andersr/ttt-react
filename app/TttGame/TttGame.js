@@ -1,11 +1,11 @@
-export default function TttGameSetup(humanPlayer) {
+export default function TttGame(humanPlayer) {
   this.humanPlayer = humanPlayer
   this.botPlayer = humanPlayer === 'x' ? 'o' : 'x'
   var totalSquares = 9
 
   var GameSquare = function (id) {
     var square = {}
-    square.state = ''
+    square.content = ''
     square.id = id
     return square
   }

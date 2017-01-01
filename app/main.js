@@ -4,6 +4,10 @@ import { Provider } from 'react-redux'
 import store from './store'
 import AppContainer from './containers/AppContainer/'
 
+// store.subscribe(function() {
+//   console.log('store.getState(): ', store.getState())
+// })
+
 render(
   <Provider store={store}>
     <AppContainer />

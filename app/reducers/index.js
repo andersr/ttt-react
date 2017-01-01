@@ -12,6 +12,11 @@ function tttApp (state = initialState, action) {
         ...state,
         humanPlayer: action.selection
       }
+      case types.CREATE_GAME:
+      return {
+        ...state,
+        tttGame: state.humanPlayer
+      }
      default:
        return state
   }

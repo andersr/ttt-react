@@ -1,11 +1,11 @@
 import React from 'react'
 import ModalDialog from '../ModalDialog'
 import SelectPlayerContainer from '../../containers/SelectPlayerContainer'
-import GameBoard from '../GameBoard'
+import GameBoardContainer from '../../containers/GameBoardContainer'
 
-const App = ({ humanPlayer }) => {
+const App = ({ humanPlayer, tttGame }) => {
   return  (
-    humanPlayer === null ? <div><ModalDialog heading={'Select Player'} content={<SelectPlayerContainer />} allowHide={false} /></div> : <GameBoard />
+    humanPlayer === null ? <div><ModalDialog heading={'Select Player'} content={<SelectPlayerContainer />} allowHide={false} /></div> : <GameBoardContainer />
   )
 }
 export default App

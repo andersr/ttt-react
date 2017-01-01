@@ -2,7 +2,7 @@ import React from 'react'
 
 const GameSquare = ({ id, content }) => {
   return  (
-    <div>Game Board</div>
+    <div>{content}</div>
   )
 }
 export default GameSquare

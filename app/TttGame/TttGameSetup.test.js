@@ -1,4 +1,4 @@
-import TttGameSetup from './TttGameSetup.js'
+import TttGame from './TttGame.js'
 
 describe('TTTGameSetup()', function(){
   let selectedPlayer
@@ -15,11 +15,11 @@ describe('TTTGameSetup()', function(){
 
   it('should set humanPlayer to x or o based on the passed in selectedPlayer arg', function(){
     selectedPlayer = 'x'
-    testGame = new TttGameSetup(selectedPlayer)
+    testGame = new TttGame(selectedPlayer)
     expect(testGame.humanPlayer).toBe(selectedPlayer)
 
     selectedPlayer = 'o'
-    testGame = new TttGameSetup(selectedPlayer)
+    testGame = new TttGame(selectedPlayer)
     expect(testGame.humanPlayer).toBe(selectedPlayer)
   })
 
@@ -27,24 +27,24 @@ describe('TTTGameSetup()', function(){
     var botPlayer
     selectedPlayer = 'x'
     botPlayer = 'o'
-    testGame = new TttGameSetup(selectedPlayer)
+    testGame = new TttGame(selectedPlayer)
     expect(testGame.botPlayer).toBe(botPlayer)
 
     selectedPlayer = 'o'
     botPlayer = 'x'
-    testGame = new TttGameSetup(selectedPlayer)
+    testGame = new TttGame(selectedPlayer)
     expect(testGame.botPlayer).toBe(botPlayer)
   })
 
   it('should instantiate 9 game squares', function(){
     selectedPlayer = 'x'
-    testGame = new TttGameSetup(selectedPlayer)
+    testGame = new TttGame(selectedPlayer)
     expect(testGame.gameSquares.length).toBe(9)
   })
 
   it('should set the state param of each game square to be an empty string', function(){
     selectedPlayer = 'x'
-    testGame = new TttGameSetup(selectedPlayer)
+    testGame = new TttGame(selectedPlayer)
     var emptySquare = ''
     // console.log('testGame: ', testGame)
     for (var i = 0; i < testGame.gameSquares.length; i++) {
@@ -55,7 +55,7 @@ describe('TTTGameSetup()', function(){
 
   it('should set the id param of each game square to be an incrementing value from 0-8', function(){
     selectedPlayer = 'x'
-    testGame = new TttGameSetup(selectedPlayer)
+    testGame = new TttGame(selectedPlayer)
     var squareId = 0
     // console.log('testGame: ', testGame)
     for (var i = 0; i < testGame.gameSquares.length; i++) {

@@ -1,7 +1,7 @@
 import React from 'react'
 import GameSquare from '../GameSquare'
 
-const GameBoard = ({ tttGame }) => {
+const GameBoard = ({ tttGame, onSelectSquare }) => {
 
   console.log('tttGame: ', tttGame)
   // let squareId = 0

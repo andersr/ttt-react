@@ -25,13 +25,13 @@ export const setPlayers = humanPlayer => {
 
 export const createTttGame = () => {
   const totalSquares = 9
-  const squares = new Array(totalSquares)
+  const squares = [] //new Array(totalSquares)
   const GameSquare = function(id){
     this.content = ''
     this.id = id
   }
-  for (var i = 0; i < squares.length; i++) {
-    squares[i] = new GameSquare(i)
+  for (var i = 0; i < totalSquares; i++) {
+    squares.push(new GameSquare(i))
   }
   return squares
 }

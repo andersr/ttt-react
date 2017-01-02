@@ -2,7 +2,7 @@ import React from 'react'
 import ModalDialog from '../ModalDialog'
 import SelectPlayerContainer from '../../containers/SelectPlayerContainer'
 import GameBoardContainer from '../../containers/GameBoardContainer'
-import { Grid } from '../Grid/Grid.js'
+import { Grid } from '../Grid/'
 
 const App = ({ humanPlayer, tttGame }) => {
   return  (

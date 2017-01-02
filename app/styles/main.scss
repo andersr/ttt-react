@@ -6,17 +6,18 @@
 // }
 
 
-.ttt-board {
+.grid {
+  list-style: none;
   // width: 100%;
   // height: 100%;
   display: table;
 
-    .ttt-row {
+    .grid-row {
       display: table-row;
       // height: 33%;
     }
 
-    .ttt-square {
+    .grid-square {
       display: table-cell;
       vertical-align: middle;
       text-align: center;

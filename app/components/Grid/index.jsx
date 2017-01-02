@@ -37,17 +37,17 @@ const GridRow = ({ row }) => {
   return (
     <ul className="grid-row">{
       row.map((square, index) => {
-        return <li key={index}><GridSquare square={square} /></li>
+        return <li key={index} className="grid-square">{square.content} (id: {square.id})</li>
       })
     }</ul>
   )
 }
 
-const GridSquare = ({ square }) => {
-  return (
-    <div className="grid-square">{square.content} (id: {square.id})</div>
-  )
-}
+// const GridSquare = ({ square }) => {
+//   return (
+//     <div className="grid-square">{square.content} (id: {square.id})</div>
+//   )
+// }
 
 Grid.propTypes = {
   columns: React.PropTypes.number

@@ -1,3 +1,2 @@
 export const SELECT_PLAYER = 'SELECT_PLAYER'
-// export const CREATE_GAME = 'CREATE_GAME'
 export const SELECT_SQUARE = 'SELECT_SQUARE'

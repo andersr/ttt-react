@@ -2,10 +2,6 @@ import React from 'react'
 
 const Grid = ({ content, columns, handleClickSquare }) => {
 
-  // const handleClickSquare = id => {
-  //   console.log('square: ', id);
-  // }
-
   const createRows = (arr) => {
     let rowBlock = columns
     let rows = []
@@ -43,11 +39,22 @@ const GridRow = ({ row, handleClickSquare }) => {
   )
 }
 
-// const GridSquare = ({ square }) => {
+// const GameSquare = ({ square }) => {
 //   return (
 //     <div className="grid-square">{square.content} (id: {square.id})</div>
 //   )
 // }
+
+// GameSquare.propTypes = {
+//   content: React.PropTypes.oneOf(['', 'x', 'o']).isRequired,
+//   id: React.PropTypes.number.isRequired
+// }
+//
+// GameSquare.defaultProps = {
+//   content: ''
+// }
+//
+
 
 Grid.propTypes = {
   columns: React.PropTypes.number
@@ -58,12 +65,3 @@ Grid.defaultProps = {
 }
 
 export default  Grid
-
-//  onClick={() => handleClickSquare(square.id)}
-// var src = [0,1,2,3,4,5,6,7,8]
-//
-// var targetStructure = [
-//   [0,1,2],
-//   [3,4,5],
-//   [6,7,8]
-// ]

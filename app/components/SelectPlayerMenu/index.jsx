@@ -2,7 +2,6 @@ import React from 'react'
 import { ButtonGroup, Button } from 'react-bootstrap'
 
 const SelectPlayerMenu = ({ handleSelectPlayer }) => {
-  // console.log('handleSelectPlayer: ', props)
   const options = ['x', 'o']
   return (
      <ButtonGroup>

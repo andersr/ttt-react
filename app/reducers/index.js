@@ -8,6 +8,7 @@ import * as types from '../actions/ActionTypes'
 function tttApp (state = initialState, action) {
   switch (action.type) {
     case types.SELECT_PLAYER:
+    // TODO: define botPlayer in the action instead
       return {
         ...state,
         players: {
@@ -27,51 +28,3 @@ function tttApp (state = initialState, action) {
 }
 
 export default tttApp
-
-// function tttPlayers (state = initialState.players, action) {
-//   switch (action.type) {
-//     case types.SELECT_PLAYER:
-//       return {
-//         ...state
-//       }
-//       case types.SELECT_SQUARE:
-//       //  find square matching action.payload.id
-//       // set content attribute = action.payload.currentPlayer
-//       return {
-//         ...state,
-//         tttGame: [
-//           ...state,
-//           updatedSquare
-//         ]
-//       }
-//      default:
-//        return state
-//   }
-// }
-// combineReducers(
-//
-// )
-
-// case types.SELECT_SQUARE:
-// //  find square matching action.payload.id
-// // set content attribute = action.payload.currentPlayer
-// return {
-//   ...state,
-//   tttGame: [
-//     ...state,
-//     updatedSquare
-//   ]
-// }
-
-// const square = (state, action) => {
-//   switch (action.type) {
-//     case SELECT_SQUARE:
-//     return {
-//
-//     }
-//
-//       break;
-//     default:
-//
-//   }
-// }

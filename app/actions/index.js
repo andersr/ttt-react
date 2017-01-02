@@ -1,25 +1,29 @@
 import * as types from './ActionTypes'
 // import TttGame from '../TttGame/TttGame.js'
 
+
+// *** ACTION CREATORS ***
+// functions that create actions
+// actions are the *only* source of information for the store
+
 export const selectPlayer = selection => ({
   type: types.SELECT_PLAYER,
-  humanPlayer: selection
+  selection
 })
 
 export const selectSquare = (id, player) => {
-
-  // use this pattern: http://redux.js.org/docs/basics/ExampleTodoList.html
-
-  // update square for this player
-  tttGame[id].content = player
-
   return {
     type: types.SELECT_SQUARE,
-    tttGame: [
-
-    ]
+    id,
+    player
   }
 }
+
+// use this pattern: http://redux.js.org/docs/basics/ExampleTodoList.html
+
+// update square for this player
+// tttGame[id].content = player
+
 
 // export const createGame = humanPlayer => {
 //   let tttGame = new TttGame(humanPlayer)

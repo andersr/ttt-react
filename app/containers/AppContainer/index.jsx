@@ -3,7 +3,7 @@ import App from '../../components/App/'
 
 const mapStateToProps = state => {
   return {
-    humanPlayer: state.humanPlayer,
+    humanPlayer: state.players.humanPlayer,
     tttGame: state.tttGame
   }
 }

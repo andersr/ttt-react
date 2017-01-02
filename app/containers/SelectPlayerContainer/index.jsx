@@ -4,14 +4,14 @@ import SelectPlayerMenu from '../../components/SelectPlayerMenu'
 
 const mapStateToProps = (state) => {
   return {
-    humanPlayer: state.humanPlayer
+    humanPlayer: state.players.humanPlayer
   }
 }
 
 const mapDispatchToProps = (dispatch) => ({
   handleSelectPlayer: selection => {
     dispatch(selectPlayer(selection))
-    // dispatch(createGame(selection)) // this works but feels like the wrong place to be doing this 
+    // dispatch(createGame(selection)) // this works but feels like the wrong place to be doing this
   }
 })
 

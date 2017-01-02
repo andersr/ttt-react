@@ -1,10 +1,10 @@
 import React from 'react'
 
-export const Grid = ({ content, columns }) => {
+const Grid = ({ content, columns, handleClickSquare }) => {
 
-  const handleClickSquare = id => {
-    console.log('square: ', id);
-  }
+  // const handleClickSquare = id => {
+  //   console.log('square: ', id);
+  // }
 
   const createRows = (arr) => {
     let rowBlock = columns
@@ -21,7 +21,7 @@ export const Grid = ({ content, columns }) => {
     let gridRows = createRows(arr)
 
     return (gridRows.map((row, index) => {
-        return <li key={index}><GridRow row={row} /></li>
+        return <li key={index}><GridRow row={row} handleClickSquare={handleClickSquare} /></li>
       })
     )
   }
@@ -33,11 +33,11 @@ export const Grid = ({ content, columns }) => {
   )
 }
 
-const GridRow = ({ row }) => {
+const GridRow = ({ row, handleClickSquare }) => {
   return (
     <ul className="grid-row">{
       row.map((square, index) => {
-        return <li key={index} className="grid-square">{square.content} (id: {square.id})</li>
+        return <li key={index} className="grid-square" onClick={() => handleClickSquare(square.id, 'x')}>{square.content} (id: {square.id})</li>
       })
     }</ul>
   )
@@ -56,6 +56,8 @@ Grid.propTypes = {
 Grid.defaultProps = {
   columns: 3
 }
+
+export default  Grid
 
 //  onClick={() => handleClickSquare(square.id)}
 // var src = [0,1,2,3,4,5,6,7,8]

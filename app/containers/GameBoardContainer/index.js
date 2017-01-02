@@ -1,18 +1,21 @@
 import { connect } from 'react-redux'
-import GameBoard from '../../components/GameBoard/'
+import { selectSquare } from '../../actions/'
+import Grid from '../../components/Grid/'
 
 const mapStateToProps = state => {
   return {
-    tttGame: state.tttGame
+    content: state.tttGame
   }
 }
 const mapDispatchToProps = (dispatch) => {
-  return {}
+  return {
+    handleClickSquare: (id, player) => dispatch(selectSquare(id, player))
+  }
 }
 
 const GameBoardContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(GameBoard)
+)(Grid)
 
 export default GameBoardContainer

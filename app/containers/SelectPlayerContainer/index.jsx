@@ -11,6 +11,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => ({
   handleSelectPlayer: selection => {
     dispatch(selectPlayer(selection))
+    dispatch(startGame())
   }
 })
 

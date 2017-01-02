@@ -4,10 +4,18 @@ import * as types from './ActionTypes'
 // functions that create actions
 // actions are the *only* source of information for the store
 
-export const selectPlayer = selection => ({
-  type: types.SELECT_PLAYER,
-  selection
+export const selectPlayer = selectedPlayer => ({
+  type: types.SET_PLAYERS,
+  humanPlayer: selectedPlayer,
+  botPlayer: selectedPlayer === 'x' ? 'o' : 'x'
 })
+
+export const startGame = () => {
+  return {
+    type: types.START_GAME,
+    gameStarted: true
+  }
+}
 
 export const selectSquare = (id, player) => {
   return {

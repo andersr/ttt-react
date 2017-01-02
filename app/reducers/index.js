@@ -7,14 +7,18 @@ import * as types from '../actions/ActionTypes'
 
 function tttApp (state = initialState, action) {
   switch (action.type) {
-    case types.SELECT_PLAYER:
-    // TODO: define botPlayer in the action instead
+    case types.SET_PLAYERS:
       return {
         ...state,
         players: {
-          humanPlayer: action.selection,
-          botPlayer: action.selection === 'x' ? 'o' : 'x'
+          humanPlayer: action.humanPlayer,
+          botPlayer: action.botPlayer
         }
+      }
+    case types.START_GAME:
+      return {
+        ...state,
+        gameStarted: action.gameStarted
       }
     case types.SELECT_SQUARE:
       let newState = Object.assign({}, state);

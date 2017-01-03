@@ -5,7 +5,8 @@ const mapStateToProps = state => {
   return {
     humanPlayer: state.players.humanPlayer,
     botPlayer: state.players.botPlayer,
-    tttGame: state.tttGame
+    tttGame: state.tttGame,
+    gameStarted: state.gameStarted
   }
 }
 const mapDispatchToProps = () => {

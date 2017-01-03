@@ -6,7 +6,7 @@ const initialState = {
     humanPlayer: null,
     botPlayer: null
   },
-  gameStarted: false,
+  activeGame: false,
   currentPlayer: null
 }
 

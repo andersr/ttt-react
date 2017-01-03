@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { setPlayers, startGame } from '../../actions'
+import { setPlayers, runGame } from '../../actions'
 import SelectPlayerMenu from '../../components/SelectPlayerMenu'
 
 const mapStateToProps = (state) => {
@@ -11,7 +11,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => ({
   handleSelectPlayer: selectedPlayer => {
     dispatch(setPlayers(selectedPlayer))
-    dispatch(startGame())
+    dispatch(runGame())
   }
 })
 

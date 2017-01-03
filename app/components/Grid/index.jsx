@@ -33,7 +33,7 @@ const GridRow = ({ row, handleClickSquare }) => {
   return (
     <ul className="grid-row">{
       row.map((square, index) => {
-        return <li key={index} className="grid-square" onClick={() => handleClickSquare(square.id, 'x')}>{square.content} (id: {square.id})</li>
+        return <li key={index} className="grid-square" onClick={() => handleClickSquare(square.id, square.content)}>{square.content}</li>
       })
     }</ul>
   )

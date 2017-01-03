@@ -18,18 +18,23 @@ function rootReducer (state = initialState, action) {
     case types.START_GAME:
       return {
         ...state,
-        gameStarted: action.gameStarted,
+        activeGame: action.activeGame,
         currentPlayer: action.currentPlayer
       }
-    case types.SELECT_SQUARE:
-      let newState = Object.assign({}, state);
-      // console.log('newState.tttGame[action.id]: ', newState.tttGame[action.id]);
-      newState.tttGame[action.id].content = action.player
-      // console.log('newState: ', newState);
-      return newState
+      case types.PLAYER_MOVE:
+        let newState = Object.assign({}, state);
+        newState.tttGame[action.id].content = action.player
+        return newState
     default:
       return state
   }
 }
 
 export default rootReducer
+
+// case types.SELECT_SQUARE:
+//   let newState = Object.assign({}, state);
+//   // console.log('newState.tttGame[action.id]: ', newState.tttGame[action.id]);
+//   newState.tttGame[action.id].content = action.player
+//   // console.log('newState: ', newState);
+// return newState

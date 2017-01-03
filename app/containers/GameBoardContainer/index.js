@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { selectSquare } from '../../actions/'
+import { playerMove } from '../../actions/'
 import Grid from '../../components/Grid/'
 
 const mapStateToProps = state => {
@@ -10,7 +10,7 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleClickSquare: (id, player) => dispatch(selectSquare(id, player))
+    handleClickSquare: (id, player) => dispatch(playerMove(id, player))
   }
 }
 

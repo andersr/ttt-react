@@ -4,7 +4,8 @@ import Grid from '../../components/Grid/'
 
 const mapStateToProps = state => {
   return {
-    content: state.tttGame
+    content: state.tttGame,
+    humanPlayer: state.players.humanPlayer
   }
 }
 const mapDispatchToProps = (dispatch) => {

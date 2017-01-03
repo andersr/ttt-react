@@ -1,6 +1,7 @@
 import React from 'react'
+import GameSquareContainer from '../../containers/GameSquareContainer'
 
-const Grid = ({ content, columns, handleClickSquare }) => {
+const Grid = ({ content, columns, handleClickSquare, humanPlayer }) => {
 
   const createRows = (arr) => {
     let rowBlock = columns
@@ -17,7 +18,7 @@ const Grid = ({ content, columns, handleClickSquare }) => {
     let gridRows = createRows(arr)
 
     return (gridRows.map((row, index) => {
-        return <li key={index}><GridRow row={row} handleClickSquare={handleClickSquare} /></li>
+        return <li key={index}><GridRow row={row} handleClickSquare={handleClickSquare} humanPlayer={humanPlayer} /></li>
       })
     )
   }
@@ -29,15 +30,38 @@ const Grid = ({ content, columns, handleClickSquare }) => {
   )
 }
 
-const GridRow = ({ row, handleClickSquare }) => {
+// const GridSquare = ({ content }) => {
+//   return ( <span>{content}</span> )
+// }
+
+const GridRow = ({ row, handleClickSquare, humanPlayer }) => {
   return (
     <ul className="grid-row">{
       row.map((square, index) => {
-        return <li key={index} className="grid-square" onClick={() => handleClickSquare(square.id, square.content)}>{square.content}</li>
+        return <li key={index} className="grid-square" onClick={() => handleClickSquare(square.id, humanPlayer)}><GameSquareContainer id={square.id} /></li>
       })
     }</ul>
   )
 }
+
+
+
+// class GridSquare extends React.Component {
+//   constructor() {
+//    super()
+//   }
+//
+//   shouldComponentUpdate(nextProps, nextState) {
+//     return !shallowEqual(this.props, nextProps) || !shallowEqual(this.state, nextState);
+//   }
+//   render() {
+//     // const { square }  = this.props
+//     return (
+//       <span>{this.props.square.content}</span>
+//     )
+//   }
+// }
+
 
 // const GameSquare = ({ square }) => {
 //   return (

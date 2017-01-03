@@ -23,10 +23,15 @@ function rootReducer (state = initialState, action) {
       }
     case types.SELECT_SQUARE:
       let newState = Object.assign({}, state);
-      console.log('newState.tttGame[action.id]: ', newState.tttGame[action.id]);
+      // console.log('newState.tttGame[action.id]: ', newState.tttGame[action.id]);
       newState.tttGame[action.id].content = action.player
-      console.log('newState: ', newState);
+      // console.log('newState: ', newState);
       return newState
+    case types.TEST_SQUARE:
+    return {
+      ...state,
+      testSquare: action.content
+    }
     default:
       return state
   }

@@ -7,7 +7,8 @@ const initialState = {
     botPlayer: null
   },
   activeGame: false,
-  currentPlayer: null
+  currentPlayer: null,
+  testSquare: ''
 }
 
 // console.log('initialState: ', initialState.tttGame)

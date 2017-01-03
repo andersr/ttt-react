@@ -1,4 +1,4 @@
-import { createTttGame } from '../TttGame/index.js'
+import { createTttGame } from '../lib/createTttGame.js'
 
 const initialState = {
   tttGame: createTttGame(),

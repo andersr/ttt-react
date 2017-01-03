@@ -30,9 +30,6 @@ const Grid = ({ content, columns, handleClickSquare, humanPlayer }) => {
   )
 }
 
-// const GridSquare = ({ content }) => {
-//   return ( <span>{content}</span> )
-// }
 
 const GridRow = ({ row, handleClickSquare, humanPlayer }) => {
   return (
@@ -45,41 +42,6 @@ const GridRow = ({ row, handleClickSquare, humanPlayer }) => {
 }
 
 
-
-// class GridSquare extends React.Component {
-//   constructor() {
-//    super()
-//   }
-//
-//   shouldComponentUpdate(nextProps, nextState) {
-//     return !shallowEqual(this.props, nextProps) || !shallowEqual(this.state, nextState);
-//   }
-//   render() {
-//     // const { square }  = this.props
-//     return (
-//       <span>{this.props.square.content}</span>
-//     )
-//   }
-// }
-
-
-// const GameSquare = ({ square }) => {
-//   return (
-//     <div className="grid-square">{square.content} (id: {square.id})</div>
-//   )
-// }
-
-// GameSquare.propTypes = {
-//   content: React.PropTypes.oneOf(['', 'x', 'o']).isRequired,
-//   id: React.PropTypes.number.isRequired
-// }
-//
-// GameSquare.defaultProps = {
-//   content: ''
-// }
-//
-
-
 Grid.propTypes = {
   columns: React.PropTypes.number
 }
@@ -88,4 +50,4 @@ Grid.defaultProps = {
   columns: 3
 }
 
-export default  Grid
+export default Grid

@@ -27,11 +27,6 @@ function rootReducer (state = initialState, action) {
       newState.tttGame[action.id].content = action.player
       // console.log('newState: ', newState);
       return newState
-    case types.TEST_SQUARE:
-    return {
-      ...state,
-      testSquare: action.content
-    }
     default:
       return state
   }

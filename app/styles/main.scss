@@ -1,15 +1,3 @@
-// .modal-container {
-//   position: relative;
-// }
-// .modal-container .modal, .modal-container .modal-backdrop {
-//   position: absolute;
-// }
-
-.test {
-  width: 100%;
-  height: 5em;
-  background-color: gray;
-}
 .grid {
   list-style: none;
   padding-left: 0;
@@ -27,28 +15,3 @@
      cursor: pointer;
    }
   }
-
-  // vertical-align: middle;
- // text-align: center;
- // font-size: 5rem;
- // line-height: .9;
- // padding: 0;
- // overflow:auto;
-  // .empty-square {
-  //   cursor: pointer;
-  //   &:hover {
-  //     background-color: $color--secondary; // was #e7e5e1
-  //   }
-  // }
-
-  // .empty-square {
-  //   height:100%;
-  //   width: 100%;
-  //   background-color: blue;
-  //   border:none;
-  //   cursor: pointer;
-  //
-  //   &:hover {
-  //     background-color: $color--secondary; // was #e7e5e1
-  //   }
-  // }

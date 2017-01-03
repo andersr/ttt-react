@@ -33,10 +33,3 @@ export const selectSquare = (id, player) => {
     player
   }
 }
-
-export const updateTestSquare = (content) => {
-  return {
-    type: types.TEST_SQUARE,
-    content
-  }
-}

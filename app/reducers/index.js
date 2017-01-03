@@ -5,7 +5,7 @@ import * as types from '../actions/ActionTypes'
 // The reducer is a pure function that takes the previous state and an action, and returns the next state.
 // (previousState, action) => newState
 
-function tttApp (state = initialState, action) {
+function rootReducer (state = initialState, action) {
   switch (action.type) {
     case types.SET_PLAYERS:
       return {
@@ -18,7 +18,8 @@ function tttApp (state = initialState, action) {
     case types.START_GAME:
       return {
         ...state,
-        gameStarted: action.gameStarted
+        gameStarted: action.gameStarted,
+        currentPlayer: action.currentPlayer
       }
     case types.SELECT_SQUARE:
       let newState = Object.assign({}, state);
@@ -31,4 +32,4 @@ function tttApp (state = initialState, action) {
   }
 }
 
-export default tttApp
+export default rootReducer

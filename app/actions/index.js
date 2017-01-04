@@ -16,7 +16,7 @@ export const setPlayers = selectedPlayer => ({
   botPlayer: selectedPlayer === 'x' ? 'o' : 'x'
 })
 
-export const startGame = (dispatch, getState) => {
+export const startGame = () => (dispatch, getState) => {
   console.log('startGame');
   const { players } = getState()
   const currentPlayer = players.humanPlayer === 'x' ? players.humanPlayer : players.botPlayer
